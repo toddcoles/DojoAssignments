@@ -1,0 +1,48 @@
+
+.topimg {
+  height: 50px;
+  width: 50px;
+  background-color: white;
+}
+
+.pic {
+  height: 100px;
+  width: 100px;
+  background-color: #f9572f;
+  border: 4px solid black;
+  padding: 10px;
+  margin: 6px;
+}
+
+.pic2 {
+  height: 100px;
+  width: 100px;
+  background-color: #4286f4;
+  border: 4px solid black;
+  padding: 10px;
+  margin: 6px;
+}
+
+.container {
+
+  margin: auto;
+  width: 50%;
+  background-color: tan;
+  height: 700px;
+  display: block;
+}
+
+.top {
+  display: block;
+  text-align: center;
+  margin-top: 25px;
+  margin-bottom: 15px;
+  padding: 15px;
+  font-family: serif;
+  font-size: 40px;
+  font-weight: bold;
+}
+
+.row1, .row2, .row3, .row4 {
+  text-align: center;
+}
