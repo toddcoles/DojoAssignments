@@ -1,0 +1,260 @@
+body {
+  background-color: black;
+}
+
+.container {
+  width: 970px;
+  height: 850px;
+  background-color: #0b3577;
+  margin: 0 auto;
+  position: static;
+  background-image: linear-gradient(#2e618c 10%,#2b5b84 90%);
+}
+
+.container img {
+  height: 100px;
+  width: 300px;
+}
+
+.topnavbar {
+  width: 970px;
+  display: inline-block;
+  height: 50px;
+}
+
+.top_left {
+  position: relative;
+  /*background-color: yellow;*/
+  width: 485px;
+  height: 120px;
+  /*display: inline-block;*/
+}
+
+.top_right {
+  position: relative;
+  top: -120px;
+  left: 485px;
+  /*background-color: white;*/
+  width: 485px;
+  height: 120px;
+  line-height: 120px;
+}
+.go {
+  background-color: #2f4f7a;
+  border-radius: 5px;
+  box-shadow: 3px 3px 3px black;
+  margin-left: 20px;
+  height: 30px;
+  font-weight: bold;
+  color: white;
+}
+
+.topnav {
+  position: relative;
+  top: -150px;
+  left: 40px;
+  width: 880px;
+  height: 40px;
+  background-color: #5d87c1;
+  border-radius: 5px;
+  color: white;
+  font-family: sans-serif;
+  font-size: 24px;
+  box-shadow: 3px 3px 3px black;
+  padding: 5px;
+  line-height: 40px;
+}
+.topnav ul li {
+  text-decoration: none;
+  display:inline-block;
+  padding-left: 20px;
+  position: relative;
+  top: -20px;
+}
+
+.site_search {
+  width: 250px;
+  height: 70px;
+  background-color: #454a51;
+  box-shadow: 3px 3px 3px black;
+  border-radius: 20px;
+  line-height: 70px;
+  padding-left: 20px;
+  position: relative;
+  top: -90px;
+  left: 150px;
+}
+.search_text {
+  position: relative;
+  top: -40px;
+  left: 210px;
+  color: white;
+  font-family: sans-serif;
+  font-size: 14px;
+}
+
+.search_text a {
+  color: gold;
+}
+
+.main_left {
+  height: 300px;
+  width: 250px;
+  /*background-color: green;*/
+  position: relative;
+  top: -140px;
+  color: white;
+  font-family: sans-serif;
+  font-size: 18px;
+  text-align: center;
+}
+.main_left ul li {
+  padding: 5px;
+  color: white;
+  text-decoration: underline;
+}
+
+.main_right {
+  height: 300px;
+  width: 700px;
+  /*background-color: red;*/
+  position: relative;
+  left: 250px;
+  top: -470px;
+}
+
+.main_right_text {
+  text-align: center;
+  color: white;
+  font-family: sans-serif;
+  font-size: 14px;
+  padding: 5px 20px 15px 20px;
+}
+
+.main_right_text_gold {
+  position: relative;
+  top: -30px;
+  color: gold;
+  font-family: sans-serif;
+  font-size: 18px;
+  font-style: italic;
+  text-align: center;
+  padding: 10px;
+  line-height: 30px;
+}
+
+.signature {
+  font-family: sans-serif;
+  font-size: 18px;
+  color: white;
+  text-align: center;
+  position: relative;
+  top: -50px;
+}
+
+.main {
+  height: 322px;
+  width: 412px;
+  background-color: #f9edf9;
+  position: relative;
+  left: 500px;
+  top: 20px;
+  font-size: 13px;
+  font-family: Verdana, helvetica, arial, monospace;
+  font-weight: bold;
+}
+
+.middle {
+  width: 970px;
+  background-color: white;
+  height: 300px;
+  position: relative;
+  display: inline-block;
+  top: -500px;
+  border-top: 4px solid black;
+}
+
+.line1, .line2 {
+  width: 320px;
+  /*color: #0b3577;*/
+  border: none;
+  background-color: #6197e2;
+  height: 4px;
+  display: inline-block;
+  margin-left: 100px;
+  margin-top: 20px;
+}
+
+.mid_left, .mid_right {
+  height: 300px;
+  width: 300px;
+  /*border: 4px solid black;*/
+  margin: 0px 40px 20px 85px;
+  display: inline-block;
+  font-family: sans-serif;
+  text-align: center;
+}
+
+.mid_left {
+  position: relative;
+  top: -20px;
+}
+
+.mid_right {
+  position: relative;
+  top: -20px
+}
+.mid_right a {
+  font-size: 10px;
+  color: #5d87c1;
+
+}
+
+.mid_left ul, .mid_right ul {
+  font-family: sans-serif;
+  font-size: 14px;
+  color: #5d87c1;
+  text-align: center;
+  margin: 20px 10px 20px 10px;
+  line-height: 20px;
+}
+
+
+  .footer {
+    height: 70px;
+    width: 960px;
+    position: relative;
+    top: -80px;
+    left: 270px;
+    margin-bottom: 20px;
+    padding-left: 10px;
+    padding-top: 15px;
+    text-align: center;
+    font-family: sans-serif;
+    /*background-color: #dee3ea;*/
+  }
+
+  .bottom_footer {
+    width: 970px;
+    position: relative;
+    top: -520px;
+    padding-left: 150px;
+  }
+
+  .bottom_footer ul li {
+    display: inline-block;
+    text-decoration: none;
+    font-family: sans-serif;
+    font-size: 16px;
+    padding: 20px 20px 0px 20px;
+    color: #5d87c1;
+  }
+  .copyright {
+    font-family: sans-serif;
+    font-size: 12px;
+    padding: 0px 20px 0px 20px;
+    color: #5d87c1;
+    position: relative;
+    left: 250px;
+    top: -10px;
+  }
