@@ -1,0 +1,151 @@
+
+
+.wrapper {
+  width: 1120px;
+  height: 950px;
+  background-color: #eaebed;
+  margin: 0 auto;
+  padding: 30px 10px 10px 10px;
+}
+
+.group {
+  /*border: 2px dashed green;*/
+  height: 55px;
+  width: auto;
+}
+
+.num {
+  text-decoration: none;
+  font-family: sans-serif;
+  font-size: 12px;
+  color: red;
+  text-align: center;
+  border: 1px solid #eaebed;
+  height: 22px;
+  width: 50px;
+  text-align: center;
+  vertical-align: bottom;
+  display: inline-block;
+  margin: 0px;
+  margin-top: 10px;
+}
+
+.first {
+  height: 22px;
+  width: 80px;
+  text-align: center;
+  /*margin-right: 20px;*/
+  vertical-align: middle;
+  display: inline-block;
+  /*border: 1px dashed pink;*/
+  font-family: sans-serif;
+  font-size: 12px;
+  color: red;
+  margin-top: 10px;
+}
+
+.first_title {
+  height: 22px;
+  width: 80px;
+  text-align: center;
+  vertical-align: middle;
+  display: inline-block;
+  /*border: 1px dashed pink;*/
+  font-family: sans-serif;
+  font-size: 12px;
+  color: red;
+  margin-top: 10px;
+}
+
+.period {
+  border: 2px dashed red;
+  width: auto;
+  height: 80px;
+  display: inline-block;
+}
+
+.element {
+  border: 1px solid black;
+  height: 50px;
+  width: 50px;
+  text-align: center;
+  vertical-align: middle;
+  display: inline-block;
+  margin: 0px;
+  line-height: 14px;
+}
+
+.el_num {
+  font-family: sans-serif;
+  text-align: center;
+  font-size: 10px;
+}
+
+.el_letter {
+  font-family: sans-serif;
+  text-align: center;
+  font-size: 16px;
+  color: blue;
+  font-weight: bold;
+}
+
+.blank {
+  border: 1px solid #eaebed;
+  height: 50px;
+  width: 50px;
+  text-align: center;
+  vertical-align: middle;
+  display: inline-block;
+  margin: 0px;
+  line-height: 14px;
+}
+
+.blue {
+  background-color: #4286f4;
+}
+
+.yellow {
+  background-color: #f9cf45;
+}
+
+.pink {
+  background-color: #f7a3c6;
+}
+
+.green {
+  background-color: #5ced55;
+}
+.bottom_spacer {
+  border: 2px solid #eaebed;
+  height: 50px;
+  width: 105px;
+  text-align: center;
+  vertical-align: middle;
+  display: inline-block;
+  margin: 0px;
+  line-height: 50px;
+  font-family: sans-serif;
+  font-size: 12px;
+  font-weight: bold;
+  color: red;
+}
+
+.asteriks {
+  color: red;
+  font-weight: bold;
+  position: relative;
+  top: auto;
+  left: 24px;
+}
+
+.asteriks2 {
+  color: red;
+  font-weight: bold;
+  position: relative;
+  top: auto;
+  left: 28px;
+}
+
+.rt {
+  margin-right: 10px;
+}
