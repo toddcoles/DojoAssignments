@@ -3,14 +3,14 @@
     var SecondNumber = -240;
     var ThirdNumber = 30.99;
     var FourthNumber = 1000;
-   
+
     var FirstName = 'Todd';
     var SecondName = 'Jason';
     var LastName = 'Coles';
-    
+
     var myAnswer = true;
     var yourAnswer = false;
-    
+
     var email;
 
     console.log('First number is: ', FirstNumber);
