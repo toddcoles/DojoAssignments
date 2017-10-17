@@ -1,0 +1,105 @@
+
+.container {
+  width: 970px;
+  height: 1050px;
+  background-color: #0b3577;
+  margin: auto;
+  position: static;
+  background: #380208; /* For browsers that do not support gradients */
+  background: -webkit-linear-gradient(left top, #380208, #230433); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(bottom right, #380208, #230433); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(bottom right, #380208, #230433); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(to bottom right, #380208, #230433); /* Standard syntax */
+
+}
+
+.container h1 {
+    text-align: center;
+    color: white;
+    padding: 15px;    
+}
+.container p, ol li {
+    color: white;
+    padding: 15px;
+}
+
+.main {
+    width: auto;
+    height: 400px;
+    border: 3px dashed pink;
+    display: inline-block;
+    margin-left: 40%;
+}
+
+#quarters, #randNumber {
+    font-family: sans-serif;
+    color: white;
+    margin-left: 45%;
+    
+}
+
+.button {
+    background-color: green;
+    width: 100px;
+    height: 40px;
+    padding: 5px;
+    color: white;
+    border-radius: 5px;
+    margin-left: 45%;
+    margin-top: 20px;
+}
+
+#quarters {
+    height: 30px;
+    width: 40px;
+    padding: 5px;
+    background-color: white;
+    /* display: inline-block; */
+    margin: 10px 0px 0px 150px;
+    color: black;
+    vertical-align: middle;
+    text-align: center;
+    line-height: 40px;
+}
+#randNumber {
+    height: 40px;
+    width: 40px;
+    padding: 5px;
+    background-color: #D42323;
+    /* display: inline-block; */
+    margin: 10px 0px 0px 150px;
+    vertical-align: middle;
+    text-align: center;
+    /* position: relative;
+    top: 10px; */
+    line-height: 40px;
+}
+
+#finalNumber {
+    height: 40px;
+    width: 80px;
+    padding: 5px;
+    background-color: blueviolet;
+    margin: 10px 0px 0px 150px;
+    font-size: 24px;
+    font-family: sans-serif;
+    visibility: hidden;
+}
+
+#myNum1 {
+    margin: 30px 0px 0px 150px;
+    height: 30px;
+    width: 45px;
+    font-family: sans-serif;
+    font-size: 24px;
+    text-align: center;
+}
+
+#dollars {
+    width: 80px;
+    height: 40px;
+    background-color: green;
+    text-align: center;
+    line-height: 40px;
+    margin: 10px 0px 0px 150px;
+}
