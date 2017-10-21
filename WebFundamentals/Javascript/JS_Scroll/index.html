@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="style.css">
+<script src="Scroll.js"></script>
+<title>Random Chance</title>
+</head>
+<body>
+    <div class="container">
+
+    <h1>Random Number Game</h1>  
+    
+    <p>Random Chance
+            Let's play the slots!
+            
+            Make a function that takes a number of quarters (1 quarter = 1 game).
+            
+            There is a 1 in 100 chance to win the slot machine (which will give you between 50 - 100 quarters -- use Math.random and Math.floor to pick a random number of coins).
+            
+            While the user still has quarters, use Math.random to determine if they won.
+            
+            If they ever win, return the number of quarters (ex: they had 50 remaining quarters and won 90, so it should return 140).
+            
+            Return 0 if all the quarters were wasted.
+            
+            Bonus (Only If You Have Time):
+            
+            Let the user pass the number they are willing to leave
+            (ex: If they won the lottery and still have 40 coins, they will keep playing until they have collected 200 coins)</p>
+           
+            <ol>
+                <li>Enter a number in the first box.</li>
+                <li>Click the "Go!" button</li>
+                <li>Amount of credits (quarters) remaining begins at 10,000</li>
+                <li>Green box indicates amount of money left</li>
+                <li>Red box indicates the random number. If it matches your number it will add the credits and turn green!</li>
+                <li>Continue clicking the button until you have no money.</li>
+                <li>HAVE FUN!!!</li>
+            </ol>
+            <div class="main">
+                <div><input type="text" value="" id="myNum1"> </div>
+                <div id="quarters">10000</div><div id="dollars"></div>
+                <div id="randNumber"></div>
+                <div id="finalNumber"></div>
+                <input type="button" class="button" value="GO!" onclick="pickNumber()">
+            </div>
+    </div>
+</body>
+</html>

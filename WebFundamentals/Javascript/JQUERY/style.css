@@ -1,0 +1,23 @@
+div {
+    width: 400px;
+    height: 200px;
+    border: 2px solid green;
+    margin: 20px;
+    padding: 10px;
+}
+
+.first_in{
+    background-color: purple;
+    opacity: 0.5;
+}
+
+.first_out{
+    background-color: green;
+}
+
+
+.second {
+    display: inline-block;
+    width: 400px;
+    height: 300px;
+}
