@@ -1,0 +1,16 @@
+.jersey {
+    width: 140px;
+    height: 151px;
+    /* display: inline-block; */
+    border: 2px solid black;
+    vertical-align: middle;
+    text-align: center;
+    background-image: url("img/ninja0.png");
+    background-repeat: no-repeat;
+    margin: 5px 0px 5px 200px;
+}
+
+img {
+    width: 140px;
+    height: 151px;
+}
