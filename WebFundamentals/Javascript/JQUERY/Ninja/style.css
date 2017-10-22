@@ -1,0 +1,31 @@
+.ninja {
+    width: 120px;
+    height: 120px;
+    border: 2px solid green;
+    margin: 20px;
+    padding: 20px 10px 0px 10px;
+    display: inline-block;
+    vertical-align: middle;
+    text-align: center;
+}
+
+.ninja1 {
+    width: 120px;
+    height: 120px;
+    border: 2px solid purple;
+    margin: 20px;
+    padding: 20px 10px 0px 10px;
+    display: inline-block;
+    vertical-align: middle;
+    text-align: center;
+}
+
+img {
+    height: 100px;
+    height: 100px;
+}
+
+#myButton {
+    margin-left: 30px;
+}
+
