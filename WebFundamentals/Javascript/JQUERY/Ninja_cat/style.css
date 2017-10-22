@@ -1,0 +1,114 @@
+.ninja {
+    width: 181px;
+    height: 51px;
+    /* display: inline-block; */
+    vertical-align: middle;
+    text-align: center;
+    background-image: url("img/ninja0.png");
+    background-repeat: no-repeat;
+    margin: 5px 0px;
+}
+
+.cat {
+    width: 181px;
+    height: 51px;
+    /* display: inline-block; */
+    vertical-align: middle;
+    text-align: center;
+    background-image: url("img/cat0.png");
+    background-repeat: no-repeat;
+    margin: 5px 0px;
+}
+
+.ninja1 {
+    width: 181px;
+    height: 51px;
+    /* display: inline-block; */
+    vertical-align: middle;
+    text-align: center;
+    background-image: url("img/ninja1.png");
+    background-repeat: no-repeat;
+    margin: 5px 0px;
+}
+
+.cat1 {
+    width: 181px;
+    height: 51px;
+    /* display: inline-block; */
+    vertical-align: middle;
+    text-align: center;
+    background-image: url("img/cat1.png");
+    background-repeat: no-repeat;
+    margin: 5px 0px;
+}
+
+.ninja2 {
+    width: 181px;
+    height: 51px;
+    /* display: inline-block; */
+    vertical-align: middle;
+    text-align: center;
+    background-image: url("img/ninja2.png");
+    background-repeat: no-repeat;
+    margin: 5px 0px;
+}
+
+.cat2 {
+    width: 181px;
+    height: 51px;
+    /* display: inline-block; */
+    vertical-align: middle;
+    text-align: center;
+    background-image: url("img/cat2.png");
+    background-repeat: no-repeat;
+    margin: 5px 0px;
+}
+
+.ninja3 {
+    width: 181px;
+    height: 51px;
+    /* display: inline-block; */
+    vertical-align: middle;
+    text-align: center;
+    background-image: url("img/ninja3.png");
+    background-repeat: no-repeat;
+    margin: 5px 0px;
+}
+
+.cat3 {
+    width: 181px;
+    height: 51px;
+    /* display: inline-block; */
+    vertical-align: middle;
+    text-align: center;
+    background-image: url("img/cat3.png");
+    background-repeat: no-repeat;
+    margin: 5px 0px;
+}
+
+.ninja4 {
+    width: 181px;
+    height: 51px;
+    /* display: inline-block; */
+    vertical-align: middle;
+    text-align: center;
+    background-image: url("img/ninja4.png");
+    background-repeat: no-repeat;
+    margin: 5px 0px;
+}
+
+.cat4 {
+    width: 181px;
+    height: 51px;
+    /* display: inline-block; */
+    vertical-align: middle;
+    text-align: center;
+    background-image: url("img/cat4.png");
+    background-repeat: no-repeat;
+    margin: 5px 0px;
+}
+
+img {
+    width: 181px;
+    height: 51px;
+}
