@@ -1,0 +1,77 @@
+.myBox {
+    width: 400px;
+    height: 180px;
+    border: 2px solid black;
+    display: inline-block;
+    margin: 5px 130px 5px 30px;
+    padding-right: 30px;
+    text-align: right;
+}
+
+label {
+    vertical-align: top;
+    margin-right: 10px;
+    text-align: right;
+}
+
+table {
+    border: 1px solid black;
+    margin-left: 100px;
+}
+
+input {
+    width: 220px;
+    margin: 5px;
+    position: relative;
+    left: 20px;
+}
+
+.btn {
+    width: 80px;
+    height: 20px;
+    margin-left: 10px;
+}
+hr {
+    display: block;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    margin-left: auto;
+    margin-right: 500px;
+    border-style: inset;
+    border-width: 2px;
+}
+
+textarea {
+    margin-right: -15px;
+}
+.main_content {
+    width: 300px;
+    height: auto;
+    border: 1px dashed blue;
+    position: relative;
+    top: -150px;
+    left: 600px;
+    padding: 10px;
+}
+
+.inside_content {
+    width: 280px;
+    height: 180px;
+    border: 1px dashed green;
+    margin: 10px 0px;
+    text-align: left;
+}
+#desc {
+    margin-right: 35px;
+}
+
+
+
+.descrip_hide {
+    visibility: hidden;
+}
+
+.descrip_show {
+    visibility: visible;
+}
+
