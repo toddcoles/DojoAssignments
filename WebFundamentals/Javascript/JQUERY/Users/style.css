@@ -1,0 +1,43 @@
+.myBox {
+    width: 400px;
+    height: 150px;
+    border: 2px solid black;
+    /* vertical-align: middle; */
+    /* text-align: center; */
+    display: inline-block;
+    margin: 5px 130px 5px 100px;
+    padding-right: 30px;
+    text-align: right;
+}
+
+/* label {
+    text-align: left;
+    margin-left: 10px;
+} */
+
+table {
+    border: 1px solid black;
+    margin-left: 100px;
+}
+
+input {
+    width: 220px;
+    margin: 5px;
+    position: relative;
+    left: 20px;
+}
+
+button {
+    width: 80px;
+    height: 20px;
+    margin-left: 10px;
+}
+hr {
+    display: block;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    margin-left: auto;
+    margin-right: 500px;
+    border-style: inset;
+    border-width: 2px;
+}
