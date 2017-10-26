@@ -1,9 +1,47 @@
+* {
+    font-family: sans-serif;
+}
+
 .wrapper {
-    width: auto;
+    width: 80%;
     height: auto;
     border: 2px solid black;
-    display: inline-block;
-    margin: 5px 130px 5px 30px;
+    /* display: inline-block; */
+    margin: 5px 30px 5px 30px;
     padding-right: 30px;
     text-align: right;
+    /* text-align: center; */
+    vertical-align: top;
+}
+.side {
+    width: 10%;
+    height: 500px;
+    border: 1px dashed red;
+    display: inline-block;
+    /* position: relative; */
+    vertical-align: top;
+    text-align: center;
+}
+.poke {
+    width: 88%;
+    height: auto;
+    /* background-color: grey; */
+    display: inline-block;
+}
+.little_pic {
+    height: 25px;
+    width: 25px;
+}
+.inside_pic {
+    width: 150px;
+    height: auto;
+    background-color: pink;
+
+}
+h2 {
+    text-align: center;
+}
+p {
+    display: block;
+    text-align: left;
 }
