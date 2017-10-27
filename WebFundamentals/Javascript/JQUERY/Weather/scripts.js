@@ -12,6 +12,7 @@ $(document).ready(function() {
             var newTemp = (1.8 * (weatherResult.main.temp - 273)) + 32;
         $('#temp').html(`<h1>${weatherResult.name}</h1><h2>Temperature: ${newTemp.toFixed(2)} F</h2>`);
         }, 'json');
+        return false;
 
     });
 });
