@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>jQuery UI Date validation</title>
+  
+  <style>
+  .wrapper {margin: 0px 0px 50px 20px; 
+            padding: 20px; 
+            width: 400px; 
+            vertical-align: middle;
+            border: 1px solid black;
+        }
+  </style> 
+
+  <link rel="stylesheet" href="http://code.jquery.com/ui/1.12.1/themes/start/jquery-ui.css">
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+  <script>
+  $(function() {
+    $( "#datepicker_from" ).datepicker();
+    $( "#datepicker_to" ).datepicker();
+    $("form").submit(function(){
+        var toDate = $('#datepicker_to').val();
+        var fromDate = $('#datepicker_from').val();
+        var yourName = $('#name').val();
+        if(yourName == ''){
+            $('#error').html('You cannot leave the name empty!');
+        } else {
+            alert(`Thanks ${yourName}, Your cruise leaves on ${fromDate} and returns of ${toDate}!`);
+        }
+        return false;
+    });
+  });
+  </script>
+</head>
+
+<body>
+    <div class="wrapper">
+        <h3>Welcome to the Codingdojo plan-a-cruise!</h3>
+        <form action="#">
+            <p>Date: <input type="text" id="datepicker_from" value="From:"></p>
+            <p>Date: <input type="text" id="datepicker_to" value="To:"></p>
+            <p>Name: <input type="text" id="name"></p>
+            
+            <input type="submit">
+            <span id="error"></span>
+        </form>
+    </div>
+</body>
+</html>
