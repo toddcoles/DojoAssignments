@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>jQuery UI Sortable - Default functionality</title>
+  <!-- <link rel="stylesheet" href="http://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <link rel="stylesheet" href="http://resources/demos/style.css"> -->
+  <link rel="stylesheet" type="text/css" href="http://code.jquery.com/ui/1.9.2/themes/start/jquery-ui.css" />
+  <style>
+  #sortable { list-style-type: none; margin: 0; padding: 0; width: 170px; vertical-align: middle;}
+  #sortable li { margin: 0 3px 3px 3px; padding: 0.4em; padding-left: 1.5em; font-size: 1.4em; height: 18px;}
+  #sortable li span { position: absolute; margin-left: -1.3em; }
+  img {width: 200px; height: 40px; position: relative; top: -10px; left: -40px;}
+  </style>
+  <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+  <script src="http://code.jquery.com/ui/1.10.4/jquery-ui.min.js"></script>
+
+  
+  <script>
+  $(function() {
+    $( "#sortable" ).sortable();
+    $( "#sortable" ).disableSelection();
+  });
+  </script>
+</head>
+<body>
+ 
+<ul id="sortable">
+  <li class="ui-state-default"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span><img src="sorting_images/sort1.png"></li>
+  <li class="ui-state-default"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span><img src="sorting_images/sort2.png"></li>
+  <li class="ui-state-default"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span><img src="sorting_images/sort3.png"></li>
+  <li class="ui-state-default"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span><img src="sorting_images/sort4.png"></li>
+  <li class="ui-state-default"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span><img src="sorting_images/sort5.png"></li>
+  
+</ul>
+
+
+ 
+ 
+</body>
+</html>

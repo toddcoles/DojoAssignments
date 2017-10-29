@@ -1,0 +1,50 @@
+* {
+    font-family: sans-serif;
+}
+
+.wrapper {
+    width: 1100px;
+    height: auto;
+    border: 2px solid black;
+    margin: 5px 30px 5px 30px;
+    padding-right: 30px;
+    text-align: left;
+    vertical-align: top;
+    display: inline-block;
+}
+
+.boxes {
+    width: 200px;
+    height: 200px;
+    border: 1px solid red;
+    margin: 25px;
+    display: inline-block;
+    vertical-align: middle;
+    text-align: center; 
+}
+.line {
+position: relative;
+z-index: 1;
+left: -20%;
+top: 50%;
+width: 140%;
+height: 1px;
+background-color: green;
+-webkit-transform: rotate(-45deg); /* Safari and Chrome */
+    -ms-transform: rotate(-45deg); /* IE 9 */
+        transform: rotate(-45deg);
+        /* background: linear-gradient(to right bottom, #2f3441 50%, #212531 50%); */
+
+}
+
+h3 {
+    border: 1px solid gray;
+    opacity: 0.5;
+}
+
+#gotDescription {
+    width: 300px;
+    height: 500px;
+    background-color: pink;
+    display: inline-block;
+}
