@@ -1,0 +1,16 @@
+<html>
+    <head>
+       <title>Form Test Index</title>
+    </head>
+    <body>
+      <h1>Index Page</h1>
+      <h3>Counter</h3>
+      <!-- read on to learn about form actions, we'll talk about the method in a later section -->
+      
+          Counter: <span name='name'>{{session['counter']}}<span>
+      <form action='/increment' method='post'>
+        <input type='submit' value='Add2' name='mybutton'>
+        <input type='submit' value='Erase' name='mybutton'>
+      </form>
+    </body>
+</html>
