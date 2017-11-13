@@ -1,0 +1,18 @@
+wrapper {
+	text-align: center;
+	margin: 100px;
+	height: 300px;
+	width: 300px;
+}
+h1{
+	font-family: sans-serif;
+}
+.low, .high {
+	background-color: yellow;
+	height: 150px;
+	width: 150px;
+	border: 2px solid black;
+}
+.correct {
+	background-color: green;
+}
