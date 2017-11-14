@@ -1,0 +1,18 @@
+<html>
+    <head>
+       <title>Submitted Info!</title>
+       <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    </head>
+    <body>
+      <div class="result">
+      <h1>Submitted Info</h1>
+      <!-- read on to learn about form actions, we'll talk about the method in a later section -->
+     <p>Email: {{ result['email'] }}</p>
+     <p>First name: {{ result['first_name'] }}</p>
+     <p>Last name: {{ result['last_name'] }}</p>
+     <p>Password: {{ session['password'] }}</p>
+     <a href="/"><button>Go Back</button></a>
+     
+      </div>
+    </body>
+</html>
