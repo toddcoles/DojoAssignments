@@ -7,22 +7,26 @@ def index():
 
 @app.route('/process', methods=['POST'])
 def process():
+  error = False
   if len(request.form['name']) < 1:
     flash("Incorrect data length for name")
-    return redirect('/')
+    error = True
   else:
     flash("Correct! Your name is {}".format(request.form['name']))
   
   if len(request.form['comment']) < 1:
     flash("Incorrect data length for comment")
-    return redirect('/')
+    error = True
   elif len(request.form['comment']) > 120:
     flash("Data in comment should be less than 120 characters")
-    return redirect('/')
+    error = True
   else:
     flash("Your comment is {}".format(request.form['comment']))
 
   session['info'] = request.form
+  if error:
+    return redirect('/')
+    
   return redirect('/result')
 
 @app.route('/result')
