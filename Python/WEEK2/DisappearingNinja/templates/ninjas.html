@@ -1,0 +1,20 @@
+<html>
+  <head>
+     <title>My User Page</title>
+     <!-- <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}"> -->
+  </head>
+  <body>
+  	{% for turtles in turtle%}
+  	<img src = '{{ turtles }}'</h1>
+  	{% endfor%}
+   <!--  <h1>{{ color }}</h1> -->
+    <!-- <h3>{{ turtle }}</h3> -->
+    <img src= '{{ turtle }}'>
+    #************************************************
+    <img src="{{ url_for('static', filename='images/'+character+'.jpg') }}" alt="{{character}}">
+
+    <!-- <div>Michelangelo</div>
+    <div>Raphael</div>
+    <div>Donatello</div> -->
+  </body> 
+</html>
