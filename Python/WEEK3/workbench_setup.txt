@@ -1,0 +1,7 @@
+use twitter;
+
+select * from users;
+
+select * from tweets;
+
+select first_name, last_name, birthday from users join tweets on tweets.user_id;
