@@ -1,0 +1,23 @@
+<html>
+<head>
+  <title>E-mails</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <h1>This is the list of valid e-mails in the database!</h1>
+  <!-- we can use the line below to see all of our data in our template -->
+<div class="wrong">{{ message }}</div>
+<!-- <h1>These are all my friends!</h1> -->
+<!-- with all the data we can then construct a more structured output -->
+<!-- {% for myemail in all_emails: %}
+   <p>Email: {{ myemail['email'] }}</p>
+{% endfor %} -->
+
+  <hr>
+  <h2>Add a valid E-mail</h2>
+  <form action='/email' method='POST'>
+    <label for="email">First Name:<input type="text" name="email" id="email"></label>
+    <input type="submit" value="Add">
+  </form>
+</body>
+</html>

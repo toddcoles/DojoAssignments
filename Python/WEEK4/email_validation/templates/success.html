@@ -1,0 +1,36 @@
+<html>
+<head>
+  <title>E-mails Success</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  
+  <div class="success">The email address you entered ( {{ last_entry['email']}} ) is a VALID email address! Thank you!</div>
+  <!-- we can use the line below to see all of our data in our template -->
+<!-- {{ all_emails }} -->
+<!-- with all the data we can then construct a more structured output -->
+<h2>Email addresses entered:</h2>
+<table>
+  <tr>
+    <th>ID</th>
+    <th>Email</th>
+    <th>Created_at</th>
+    <th>Actions</th>
+  </tr>
+  
+    {% for myemail in all_emails: %}
+   <tr>
+    <td>{{ myemail['id'] }}</td>
+    <td>{{ myemail['email'] }}</td>
+    <td>{{ myemail['created_at'] }}</td>
+    <td><a href="/delete/{{ myemail['id']}}">Delete</a></td>
+  </tr>
+{% endfor %}
+    
+</table>
+
+
+  <hr>
+  <a href="/back">Back</a>
+</body>
+</html>

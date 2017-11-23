@@ -1,0 +1,19 @@
+.success {
+	background-color: #168729;
+	text-align: center;
+	margin: 5%;
+	height: auto;
+	width: 200px;
+	border: 2px solid black;
+	display: inline-block;
+
+}
+
+.wrong {
+	background-color: red;
+	text-align: center;
+	height: 20px;
+	width: auto;
+	border: 2px solid black;
+	display: inline-block;	
+}
