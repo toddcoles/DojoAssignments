@@ -1,0 +1,41 @@
+<html>
+<head>
+  <title>Friends</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <h1>Full friends!</h1>
+  <!-- we can use the line below to see all of our data in our template -->
+<!-- {{ all_friends }} -->
+<!-- with all the data we can then construct a more structured output -->
+<table border="1" width="700px">
+  <thead>
+    <tr>
+      <td>First Name</td>
+      <td>Last Name</td>
+      <td>Email</td>
+      <td>Actions</td>
+    </tr>
+  </thead>
+  <tbody>
+{% for friend in all_friends: %}
+   <tr>
+   <td>{{ friend['first_name'] }}</td>
+   <td>{{ friend['last_name'] }}</td>
+   <td>{{ friend['email'] }}</td>
+   <td><a href="/update_friend/{{ friend['id'] }}/edit">Edit</a> | <a href="/friend/{{ friend['id'] }}/delete">Delete</a></td>
+ </tr>
+   
+{% endfor %}
+</tbody>
+</table>
+  <hr>
+  <h2>Add a Friend</h2>
+  <form action='/add_friend' method='POST'>
+    <p><label for="first_name">First Name:<input type="text" name="first_name" id="first_name"></label></p>
+    <p><label for="last_name">Last Name:<input type="text" name="last_name" id="last_name"></label></p>
+    <p><label for="email">Email:<input type="text" name="email" id="email"></label></p>
+    <input type="submit" value="Add Friend">
+  </form>
+</body>
+</html>
