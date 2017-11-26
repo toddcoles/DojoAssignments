@@ -20,7 +20,12 @@ mysql = MySQLConnector(app, 'friendsdb')
 
 @app.route('/', methods=['GET'])
 def index():
-    return render_template('index.html') #, all_users=all_users_query)
+    query2 = "SELECT * FROM friends"
+    user = mysql.query_db(query2)
+    if user:
+        return render_template('index.html', all_users=user)
+    else:
+        return render_template('index.html')
 # we are going to add functions to create new users and login users
 
 @app.route('/create_user', methods=['POST'])
@@ -73,7 +78,7 @@ def create_user():
         insert_query = "INSERT INTO friends (first_name, last_name, created_at, updated_at, email, pw_hash, username) VALUES (:first_name, :last_name,  NOW(), NOW(), :email, :pw_hash, :username)"
         query_data = { 'first_name': first_name, 'last_name': last_name, 'email': email,'pw_hash': pw_hash, 'username': username }
         result = mysql.query_db(insert_query, query_data)
-        session['status'] = request.form['username']
+        # session['status'] = request.form['username'] #User automatically logged on when they register with this line
  # redirect to success page
         return redirect('/')
 
@@ -108,13 +113,22 @@ def login_user():
     if user:
         if (user[0]['username'] == request.form['username']) and (user[0]['pw_hash'] == pw_hash): # run query with query_db()
             session['status'] = user[0]['username']
-            return render_template('index.html') #, auth_user=user) # pass data to our template
+            query2 = "SELECT * FROM friends"
+            user = mysql.query_db(query2)
+            return render_template('index.html', all_users=user) #, auth_user=user) # pass data to our template
         else:
             flash("ERROR: Username or password not in database", "user_err")
             error = True
             if error:
                 return redirect('/login')
     else:
-        return redirect('/login')
+        return redirect('/')
+
+@app.route('/delete/<user_id>')
+def delete(user_id):
+    query = "DELETE FROM friends WHERE id = :id"
+    data = {'id': user_id}
+    mysql.query_db(query, data)
+    return redirect('/')
 
 app.run(debug=True)
