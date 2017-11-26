@@ -1,0 +1,40 @@
+<html>
+<head>
+  <title>Login</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <!-- jQuery library -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <!-- Latest compiled JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+  <h1>Full friends!</h1>
+  <ul>
+    <li><a href="/">Home</a></li> | 
+    <li><a href="/register">Register</a></li> |
+    <!-- <li><a href="/login">Login</a></li> |  -->
+    {% if 'status' in session %}
+      <li>{{ session['status'] }} is logged in!</li> | 
+      <li><a href="/logout" name="logout" id="logout">Log out</a></li> | 
+    {% else %}
+      <li><a href="/login" name="Login" id="login">Log in</a></li> | 
+    {% endif %}
+  </ul>
+  
+  <!-- <div class="logout"><a href="/logout" name="logout" id="logout">Log out</a></div> -->
+  {% with messages = get_flashed_messages(with_categories=true) %}
+    {% if messages %}
+      {% for category, message in messages %}
+        <p>{{message}}</p>
+      {% endfor %}
+    {% endif %}
+  {% endwith %}
+  <!-- we can use the line below to see all of our data in our template -->
+<!-- {{ all_friends }} -->
+<!-- with all the data we can then construct a more structured output -->
+  
+
+
+</body>
+</html>
