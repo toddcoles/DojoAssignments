@@ -1,0 +1,71 @@
+<html>
+<head>
+  <title>CodingDojo Wall</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <!-- jQuery library -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <!-- Latest compiled JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+  <div class="header">
+  <h1><a href="/" class="home"><img src="/static/home.ico"></a>CodingDojo Wall</h1>
+  <div class="user">
+    <ul>
+      <!-- <li><a href="/">Home</a></li> | -->
+      <li><a href="/register">Register</a></li> | 
+      {% if 'status' in session %}
+        <li>Welcome {{ session['status'] }}!</li> | 
+        <li><a href="/logout" name="logout" id="logout">Log out</a></li> | 
+      {% else %}
+        <li><a href="/login" name="Login" id="login">Log in</a></li>
+      {% endif %}
+    </ul>
+  </div>
+  </div>
+  <hr>
+  <!-- <div class="logout"><a href="/logout" name="logout" id="logout">Log out</a></div> -->
+  {% with messages = get_flashed_messages(with_categories=true) %}
+    {% if messages %}
+      {% for category, message in messages %}
+        <p>{{message}}</p>
+      {% endfor %}
+    {% endif %}
+  {% endwith %}
+ 
+   {% if session['status']: %}
+   <div class="content">
+     <div class="posts">
+       <div class="my_post">
+          
+          <form action='/add_message' method='POST'>
+            <div class="md-form"><label class="active" for="form6">Post a message:</label><textarea rows="4" cols="20" name="posts" id="posts" class="form-control"></textarea></div>
+            <input type="submit" value="Post a message" class="post_button">
+          </form>
+        </div>
+     </div>
+     {% for comment in all_users: %}
+        
+        <div class="posts"><p class="names">{{ comment['name'] }} - {{ comment['created_at'] }}</p>{{ comment['message'] }}
+          {% for post in all_posts: %}
+            {% if post['message_id'] == comment['id']: %}
+            <div class="sub_posts"><p class="names_comment">{{ post['name']}} - {{ post['updated_at']}}</p><p class="post_italic">{{ post['comment'] }}</p></div>
+            {% endif %}
+          {% endfor %}
+
+            <form action="/add_comment/{{ comment['id'] }}" method='POST'>
+            <div class="md-form"><label class="active" for="form6">Post a comment:</label><textarea rows="3" cols="20" name="add_comment" id="add_comment" class="form-control"></textarea></div>
+            <input type="submit" value="Post a comment" class="add_comment">
+            </form>
+        </div>
+
+          
+        
+     {% endfor %}
+     
+     This is in the content area
+   </div>
+   {% endif %}</div>
+</body>
+</html>
