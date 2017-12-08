@@ -1,0 +1,15 @@
+<html>
+<head>
+  <title>Time Display</title>
+   {% load static %}
+      <!-- The line above tells Django to be ready to listen for static files -->
+      <link rel="stylesheet" href="{% static 'time_display/css/time_display.css' %}" media="screen" title="no title"  charset="utf-8">
+</head>
+<body>
+  <div class="title">The current time and date:</div>
+  <!-- we can use the line below to see all of our data in our template -->
+<div class="main">{{ mytime }}</div>
+<!-- with all the data we can then construct a more structured output -->
+
+</body>
+</html>
