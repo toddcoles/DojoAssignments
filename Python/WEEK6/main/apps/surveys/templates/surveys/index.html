@@ -1,0 +1,41 @@
+<html>
+<head>
+  <title>Surveys</title>
+   {% load static %}
+      <!-- The line above tells Django to be ready to listen for static files -->
+      <link rel="stylesheet" href="{% static 'surveys/css/surveys.css' %}" media="screen" title="no title"  charset="utf-8">
+</head>
+<body>
+  <!-- we can use the line below to see all of our data in our template -->
+	<div class="main">
+		<form action="/result" method="POST">{% csrf_token %}
+			<label for="name">Your name:</label>
+            <input type="text" name="name"><br>
+      <label for="location">Dojo Location:</label>
+			<select name="location">
+  				<option value="online">online</option>
+  				<option value="dallar">Dallas</option>
+  				<option value="silicon_valley">Silicon Valley</option>
+  				<option value="seattle">Seattle</option>
+  				<option value="los_angeles">Los Angeles</option>
+  				<option value="washington">Washington D.C.</option>
+  				<option value="chicago">Chicago</option>
+  				<option value="tulsa">Tulsa</option>
+			</select><br>
+
+      <label for="language">Language:</label>
+			<select name="language">
+  				<option value="python">Python</option>
+  				<option value="c#">C#</option>
+  				<option value="JavaScript">JavaScript</option>
+  				<option value="ruby">Ruby</option>
+  				<option value="objective-c">Objective-C</option>
+  				<option value="PHP">PHP</option>
+			</select><br>
+			<label for="comment">Comment (optional):</label>
+            <textarea name="comment" rows="4" cols="50"></textarea>			<br>
+		<input type="submit" value="Submit">
+<!-- with all the data we can then construct a more structured output -->
+	</div>
+</body>
+</html>
