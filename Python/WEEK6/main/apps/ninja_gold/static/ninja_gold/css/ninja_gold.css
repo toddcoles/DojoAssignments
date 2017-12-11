@@ -1,0 +1,44 @@
+.locations {
+	text-align: center;
+	margin: 5%;
+	height: 200px;
+	width: 200px;
+	border: 2px solid black;
+	display: inline-block;
+
+}
+/*.activities {
+	width: 80%;
+	height: auto;
+	border: 2px solid black;
+	height: 300px;
+	overflow: scroll;
+}*/
+
+.total_gold {
+	border: 1px solid black;
+	width: 50px;
+	height: 20px;
+	background-color: green;
+}
+.button {
+	background-color: orange;
+}
+
+
+div#activities{
+  width: 98%;
+  height: 300px;
+  border: 2px solid black;
+  overflow: scroll;
+}
+
+h1{
+  text-align: center;
+}
+p{
+  color: green;
+}
+p.loss{
+  color: red;
+}
