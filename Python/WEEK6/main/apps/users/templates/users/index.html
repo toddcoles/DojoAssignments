@@ -1,0 +1,36 @@
+<html>
+<head>
+  <title>Session_words</title>
+   {% load static %}
+      <!-- The line above tells Django to be ready to listen for static files -->
+      <link rel="stylesheet" href="{% static 'Session_words/css/Session_words.css' %}" media="screen" title="no title"  charset="utf-8">
+</head>
+<body>
+  <!-- we can use the line below to see all of our data in our template -->
+	<div class="container">
+	<div class="main">
+		<form action="/add_word" method="POST">{% csrf_token %}
+			<label for="word">Add a new word:</label><br>
+            <input type="text" name="word"><br>
+      <label for="location">Choose color:</label><br>
+  				<input type="radio" name="color" value="red">red<br>
+  				<input type="radio" name="color" value="green">green<br>
+  				<input type="radio" name="color" value="blue">blue<br>
+  				<input type="checkbox" name="big" value="big">Show in BIG fonts!<br>
+		<input type="submit" value="Add to session">
+		</form>
+<!-- with all the data we can then construct a more structured output -->
+	</div>
+	<div class="main">
+		<a href="/delete"><button>Clear Session</button></a>
+            {% if request.session.words %}
+                {% for word in request.session.words %}
+                <p><span style="color:{{ word.color }}" class="{{ word.big }}">{{word.word}}</span> - added on {{ word.created_at }}</p>
+                {% endfor %}
+            {% endif %}
+
+	</div>
+	</div>
+
+</body>
+</html>

@@ -10,7 +10,7 @@ def new(request):
     return HttpResponse("placeholder to display a new form to create a new blog")
     
 def create(request):
-    return redirect('/')
+    return redirect('/blogs')
 
 def show(request, blog_id):
     print blog_id
@@ -19,6 +19,6 @@ def show(request, blog_id):
 def edit(request, blog_id):
     return HttpResponse("placeholder to edit blog {}".format(blog_id))
     
-def delete(request, blog_id):
-    return redirect('/')
+def destroy(request, blog_id):
+    return redirect('/blogs')
 # Create your views here.
