@@ -1,0 +1,46 @@
+python manage.py makemigrations
+python manage.py migrate
+python manage.py shell
+
+User.objects.create(first_name="Michael", last_name="Jordan", email_address="mike@jumpman.com", age=23)
+<User: User object>
+
+User.objects.create(first_name="Todd", last_name="Coles", email_address="todd_coles@hotmail.com", age="46")
+<User: User object>
+
+User.objects.create(first_name="Lydia", last_name="Catalan", email_address="lidicatagira@hotmail.com", age="45")
+<User: User object>
+
+User.objects.create(first_name="Nicolas", last_name="Coles", email_address="nicolas.eeuu@hotmail.com", age="15")
+<User: User object>
+
+# Get all users
+User.objects.all()
+<QuerySet [<User: User object>, <User: User object>, <User: User object>, <User: User object>]>
+
+# Get last user
+User.objects.last()
+<User: User object>
+
+# Get first user
+User.objects.first()
+<User: User object>
+
+# Get all users order by last name DESC
+User.objects.all().order_by("last_name")
+<QuerySet [<User: User object>, <User: User object>, <User: User object>, <User: User object>]>
+
+# Get user with ID=3 and change the last name
+User.objects.get(id=3).last_name
+u'Catalan'
+user3.last_name = "Coles"
+user3.save()
+User.objects.get(id=3).last_name
+u'Coles'
+
+# Delete user 4
+User.objects.get(id=4).delete()
+(1, {u'user_login.User': 1})
+User.objects.all()
+<QuerySet [<User: User object>, <User: User object>, <User: User object>]>
+
