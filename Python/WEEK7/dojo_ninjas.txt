@@ -1,0 +1,91 @@
+C:\Users\todd_\Desktop\DojoAssignments\Python\WEEK7\main\apps>python ../manage.py makemigrations
+Migrations for 'dojo_ninjas':
+  dojo_ninjas\migrations\0001_initial.py
+    - Create model dojos
+    - Create model ninjas
+
+C:\Users\todd_\Desktop\DojoAssignments\Python\WEEK7\main\apps>python ../manage.py migrate
+Operations to perform:
+  Apply all migrations: admin, auth, contenttypes, dojo_ninjas, sessions, user_login
+Running migrations:
+  Applying dojo_ninjas.0001_initial... OK
+
+C:\Users\todd_\Desktop\DojoAssignments\Python\WEEK7\main\apps>python ../manage.py shell
+Python 2.7.13 (v2.7.13:a06454b1afa1, Dec 17 2016, 20:42:59) [MSC v.1500 32 bit (Intel)] on win32
+Type "help", "copyright", "credits" or "license" for more information.
+(InteractiveConsole)
+>>> from apps.dojo_ninjas.models import *
+
+# CREATE DOJOS
+>>> dojos.objects.create(name="Coding Dojo Silicon Valley", city="Mountain View", state="CA")
+<dojos: dojos object>
+>>> dojos.objects.create(name="Coding Dojo Seattle", city="Seattle", state="WA")
+<dojos: dojos object>
+>>> dojos.objects.create(name="Coding Dojo New York", city="New York", state="NY")
+<dojos: dojos object>
+
+# CREATE NINJAS
+>>> ninjas.objects.create(first_name="Todd", last_name="Coles", doni=dojo1)
+<ninjas: ninjas object>
+>>> ninjas.objects.create(first_name="Lydia", last_name="Catalan", doni=dojo1)
+<ninjas: ninjas object>
+>>> ninjas.objects.create(first_name="Nicolas", last_name="Coles", doni=dojo1)
+<ninjas: ninjas object>
+
+# SET VARIABLES FOR DOJOS
+>>> dojo2 = dojos.objects.get(id=2)
+>>> dojo3 = dojos.objects.get(id=3)
+
+>>> ninjas.objects.create(first_name="John", last_name="Smith", doni=dojo2)
+<ninjas: ninjas object>
+>>> ninjas.objects.create(first_name="Jane", last_name="Doe", doni=dojo2)
+<ninjas: ninjas object>
+>>> ninjas.objects.create(first_name="John", last_name="Hancock", doni=dojo2)
+<ninjas: ninjas object>
+>>> ninjas.objects.create(first_name="Mark", last_name="Zuckerberg", doni=dojo3)
+<ninjas: ninjas object>
+>>> ninjas.objects.create(first_name="Bill", last_name="Gates", doni=dojo3)
+<ninjas: ninjas object>
+>>> ninjas.objects.create(first_name="Steve", last_name="Jobs", doni=dojo3)
+<ninjas: ninjas object>
+
+# SELECT ALL NINJAS OF FIRST DOJO
+>>> ninjas.objects.all().filter(doni=dojo1)
+<QuerySet [<ninjas: ninjas object>, <ninjas: ninjas object>, <ninjas: ninjas object>]>
+
+# SELECT ALL NINJAS OF LAST DOJO
+>>> ninjas.objects.all().filter(doni=dojo3)
+<QuerySet [<ninjas: ninjas object>, <ninjas: ninjas object>, <ninjas: ninjas object>]>
+
+# ADD DESC FIELD TO THE DOJOS TABLE
+C:\Users\todd_\Desktop\DojoAssignments\Python\WEEK7\main\apps>python ../manage.py makemigrations
+You are trying to add a non-nullable field 'desc' to dojos without a default; we can't do that (the database needs something to populate existing rows).
+Please select a fix:
+ 1) Provide a one-off default now (will be set on all existing rows with a null value for this column)
+ 2) Quit, and let me add a default in models.py
+Select an option: 1
+Please enter the default value now, as valid Python
+The datetime and django.utils.timezone modules are available, so you can do e.g. timezone.now
+Type 'exit' to exit this prompt
+>>> "N/A"
+Migrations for 'dojo_ninjas':
+  dojo_ninjas\migrations\0002_auto_20171217_0941.py
+    - Add field desc to dojos
+    - Alter field doni on ninjas
+
+C:\Users\todd_\Desktop\DojoAssignments\Python\WEEK7\main\apps>python ../manage.py migrate
+Operations to perform:
+  Apply all migrations: admin, auth, contenttypes, dojo_ninjas, sessions, user_login
+Running migrations:
+  Applying dojo_ninjas.0002_auto_20171217_0941... OK
+
+C:\Users\todd_\Desktop\DojoAssignments\Python\WEEK7\main\apps>python ../manage.py shell
+Python 2.7.13 (v2.7.13:a06454b1afa1, Dec 17 2016, 20:42:59) [MSC v.1500 32 bit (Intel)] on win32
+Type "help", "copyright", "credits" or "license" for more information.
+(InteractiveConsole)
+>>> from apps.dojo_ninjas.models import *
+
+# TEST TO SEE IF THE MODEL WAS UPDATED
+>>> dojos.objects.get(id=1).desc
+u'N/A'
+>>>
