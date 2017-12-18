@@ -1,0 +1,25 @@
+<html>
+<head>
+	<title>Show user</title>
+	<h1>Show user</h1>
+	 {% load static %}
+			<!-- The line above tells Django to be ready to listen for static files -->
+			<link rel="stylesheet" href="{% static 'restful/css/restful.css' %}" media="screen" title="no title"  charset="utf-8">
+</head>
+<body>
+	<!-- we can use the line below to see all of our data in our template -->
+	<div class="container">
+	<div class="main">
+			<label for="first">Full name:</label>{{user.first_name}} {{user.last_name}}<br>
+			<label for="email">Email:</label>{{user.email}}<br>
+			<label for="email">Created at:</label>{{user.created_at}}<br>
+			<label for="email">Updated at:</label>{{user.updated_at}}<br>
+			
+		<a href="/restful/{{user.id}}/edit"><input type="button" value="Edit user!"></a>
+		<a href="/"><input type="button" value="Back!"></a>
+<!-- with all the data we can then construct a more structured output
+	</div>
+	</div>
+
+</body>
+</html>

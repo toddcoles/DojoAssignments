@@ -1,0 +1,28 @@
+<html>
+<head>
+  <title>Add user</title>
+  <h1>Add a New User</h1>
+   {% load static %}
+      <!-- The line above tells Django to be ready to listen for static files -->
+      <link rel="stylesheet" href="{% static 'restful/css/restful.css' %}" media="screen" title="no title"  charset="utf-8">
+</head>
+<body>
+  <!-- we can use the line below to see all of our data in our template -->
+	<div class="container">
+	<div class="main">
+		<form action="/restful/add_person" method="POST">{% csrf_token %}
+			<label for="first">First name:</label><br>
+            <input type="text" name="first_name"><br>
+      <label for="last">Last name:</label><br>
+            <input type="text" name="last_name"><br>
+      <label for="email">Email:</label><br>
+            <input type="text" name="email"><br>
+      
+		<input type="submit" value="Add user!"><a href="/"><input type="button" value="Back!"></a>
+		</form>
+<!-- with all the data we can then construct a more structured output
+	</div>
+	</div>
+
+</body>
+</html>
