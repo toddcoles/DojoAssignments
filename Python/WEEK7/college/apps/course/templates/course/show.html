@@ -1,0 +1,23 @@
+<html>
+<head>
+	<title>Delete confirmation</title>
+	<h3>Are you sure you want to delete the following course?</h3>
+	 {% load static %}
+			<!-- The line above tells Django to be ready to listen for static files -->
+			<link rel="stylesheet" href="{% static 'course/css/course.css' %}" media="screen" title="no title"  charset="utf-8">
+</head>
+<body>
+	<!-- we can use the line below to see all of our data in our template -->
+	<div class="container">
+	<div class="main">
+			<label for="first">Name:</label>{{course.course_name}}<br>
+			<label for="email">Description:</label>{{course.desc}}<br>
+			
+		<a href="/course/{{user.id}}/delete"><input type="button" value="Edit user!"></a>
+		<a href="/"><input type="button" value="Back!"></a>
+<!-- with all the data we can then construct a more structured output
+	</div>
+	</div>
+
+</body>
+</html>

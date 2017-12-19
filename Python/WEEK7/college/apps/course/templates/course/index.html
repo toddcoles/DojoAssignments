@@ -1,0 +1,46 @@
+<html>
+<head>
+  <title>College courses</title>
+  <h1>Courses</h1>
+   {% load static %}
+      <!-- The line above tells Django to be ready to listen for static files -->
+      <link rel="stylesheet" href="{% static 'course/css/course.css' %}" media="screen" title="no title"  charset="utf-8">
+</head>
+<body>
+  <!-- we can use the line below to see all of our data in our template -->
+	<div class="container">
+	
+
+  <div class="main">
+    <form action="/course/add_course" method="POST">{% csrf_token %}
+      <label for="first">Course name:</label><br>
+            <input type="text" name="course_name"><br>
+      <label for="last">Desc:</label><br>
+            <input type="text" name="desc"><br>
+    <p><input type="submit" value="Add course!"></p>
+    <!-- <a href="/"><input type="button" value="Back!"></a> -->
+    </form>
+
+  </div>
+
+
+		<div class="main">
+      
+    <table><title>Courses</title>
+      <thead><th>Course Name</th><th>Desc</th><th>Date added</th><th>Actions</th></thead>
+      <tbody>
+      {% for item in items %}
+        <tr><td>{{ item.course_name }}</td>
+            <td>{{ item.desc }}</td>
+            <td>{{ item.created_at }}</td>
+            <td> <a href="/course/{{ item.id}}/destroy">Remove</a></tr>
+      {% endfor %}
+      
+      </tbody>
+    </table>
+    
+  </div>
+	</div>
+
+</body>
+</html>
