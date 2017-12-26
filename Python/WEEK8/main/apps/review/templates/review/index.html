@@ -1,0 +1,38 @@
+<html>
+<head>
+  <title>Login</title>
+  {% load static %}
+  <!-- The line above tells Django to be ready to listen for static files -->
+    <link rel="stylesheet" href="{% static 'login_registration/css/skeleton.css' %}" media="screen" title="no title"  charset="utf-8">
+
+</head>
+<body>
+  <div class="two columns"><h5>Welcome, {{ request.session.user_name }}</h5></div>
+  
+  <div class="ten columns"><a href="/review/add_review"><h6>Add new book and review</h6></a> | 
+
+    <a href="/logout">Log out</a></div>
+
+ <div class="three columns">
+            <h5>Recent Book Reviews:</h5>
+            {% for my_books in first_books %}
+            <div class="review">
+                <h5><a href="/review/{{my_books.book.id}}">{{ my_books.book.title }}</a></h5>
+                <p>Rating: {{ my_books.stars }}</p>
+                <p><a href="/user/{{my_books.user.id}}">{{ my_books.user.first_name}}</a> says: {{ my_books.the_review }}</p>
+                <p>Posted on: {{ my_books.created_at }}</p>
+            </div>
+            {% endfor %}
+        </div>
+
+
+     <div class="three columns">
+            <h5>Other Books with Reviews:</h5>
+            {% for review in all_books %}
+            <div class="review">
+                <h2><a href="/books/{{review.book.id}}">{{ review.book.title }}</a></h2>
+            </div>
+            {% endfor %}
+        </div>
+</body>
+</html>

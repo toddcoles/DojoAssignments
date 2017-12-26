@@ -1,0 +1,25 @@
+<html>
+<head>
+  <title>Add new book and review</title>
+  {% load static %}
+  <!-- The line above tells Django to be ready to listen for static files -->
+    <link rel="stylesheet" href="{% static 'login_registration/css/skeleton.css' %}" media="screen" title="no title"  charset="utf-8">
+
+</head>
+<body>
+  <div class="ten columns"><h5>Show book:</h5></div>
+  <hr>
+  
+ <div class="three columns">
+            <h5>Book added:</h5>
+            <div class="review">
+                <h5><a href="/review/show/{{mybook.book.id}}">{{ mybook.book.title }}</a></h5>
+                <p>Rating: {{ mybook.stars }}</p>
+                <p><a href="/review/user/{{mybook.user.id}}">{{ mybook.user.first_name}}</a> says: {{ mybook.the_review }}</p>
+                <p>Posted on: {{ mybook.created_at }}</p>
+            </div>
+            
+        </div>
+
+</body>
+</html>

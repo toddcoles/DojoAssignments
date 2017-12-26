@@ -1,6 +1,6 @@
 from __future__ import unicode_literals
 from .models import User
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, HttpResponseRedirect, reverse
 from django.contrib import messages
 
 # Create your views here.
@@ -23,9 +23,9 @@ def login(request):
 		for err in result:
 			messages.error(request, err)
 		return redirect('/')
-	request.session['user_id'] = result.id
+	request.session['user_name'] = result.first_name
 	messages.success(request, "Successfully logged in!")
-	return redirect('/success')
+	return redirect("/review")
 
 def success(request):
 	try:

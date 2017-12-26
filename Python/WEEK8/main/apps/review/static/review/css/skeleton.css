@@ -28,10 +28,9 @@
 
 /* Grid
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
-
 .main_container {
   border: 1px solid blue;
-  width: 100%;
+  width: 34%;
   height: auto;
   padding: 10px;
   display: inline-block;
@@ -284,7 +283,7 @@ label,
 legend {
   display: block;
   margin-bottom: .5rem;
-  font-weight: 10; }
+  font-weight: 600; }
 fieldset {
   padding: 0;
   border-width: 0; }

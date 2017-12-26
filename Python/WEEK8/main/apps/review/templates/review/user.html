@@ -1,0 +1,30 @@
+<html>
+<head>
+  <title>User</title>
+  {% load static %}
+  <!-- The line above tells Django to be ready to listen for static files -->
+    <link rel="stylesheet" href="{% static 'login_registration/css/skeleton.css' %}" media="screen" title="no title"  charset="utf-8">
+
+</head>
+<body>
+  <div class="ten columns"><h5>User Alias:</h5></div>
+  <hr>
+  
+ <div class="three columns">
+            <div class="review">User alias: {{ myuser.first_name }}</div>   
+                <p>Name:{{ myuser.first_name }} {{ myuser.last_name }}</p>
+                <p>Email: {{ myuser.email }}</p>
+                <p>{{myuser.id}}</p>
+                <p>Posted reviews on the following books:</p>
+
+                {% for reviews in user_reviews %}
+                    {% if reviews.user.id == myuser.id %}
+                           <a href="/review/show/{{ reviews.book.id}}">{{ reviews.book.title }}</a><br>
+                    {% endif %}
+                {% endfor %}
+                User id:{{ myuser.id }}  
+
+        </div>
+
+</body>
+</html>
