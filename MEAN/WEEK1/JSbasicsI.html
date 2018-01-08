@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>JS Basics I</title>
+	<script>
+		// Part 1
+		let x = []
+		x.push('coding')
+		x.push('dojo')
+		x.push('rocks')
+		console.log(x)
+		x.pop()
+		console.log(x)
+
+		// Part 2
+		const y = []
+		console.log(y)
+		y.push(88)
+		console.log(y)
+		// The value gets assigned because it had no value to begin with
+
+		// Part 3
+		var z = [9, 10, 6, 5, -1, 20, 13, 2]
+		for( var i = 0; i < z.length; i++){
+			console.log(z[i]);
+		}
+
+		for( var j = 0; j < z.length-1; j++){
+			console.log(z[j]);
+		}
+
+		// Part 4
+		var names = ['Kadie', 'Joe', 'Fritz', 'Pierre', 'Alphonso']
+		for( var n = 0; n < names.length; n++){
+			console.log(names[n]);
+		}
+
+		for( var n = 0; n < names.length; n++){
+			if(names[n].length == 5){
+				console.log("Name with length of 5: " + names[n]);
+			}
+		}
+
+		function yell(string){
+			return console.log(string.toUpperCase())
+		}
+
+		yell('this is the string');
+	</script>
+</head>
+<body>
+</body>
+</html>
