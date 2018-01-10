@@ -1,0 +1,35 @@
+<html>
+<body>
+    <h1>Students</h1>
+    <ul id="main">
+        <!-- this is empty-->
+    </ul> 
+<script>
+    function appendList(array, id){
+    	for( var x = 0; x < array.length; x++){
+        var node = document.createElement("li");                 // Create a <li> node
+		var textnode = document.createTextNode(array[x]);         // Create a text node
+		node.appendChild(textnode);                              // Append the text to <li>
+		document.getElementById(id).appendChild(node);     // Append <li> to <ul> with id="myList"
+		}
+    };
+
+    function superAppend(array, element, id){
+    for( var i = 0; i < array.length; i++){
+        var node = document.createElement(element);                 // Create a <li> node
+		var textnode = document.createTextNode(array[i]);         // Create a text node
+		node.appendChild(textnode);                              // Append the text to <li>
+		document.getElementById(id).appendChild(node);     // Append <li> to <ul> with id="myList"
+		}
+};
+
+
+
+    let students = ["Jeff", "Jenny", "Javier", "Joslyn", "Joe", "Jane", "Django"];
+    let target_id = "main";
+    appendList(students, target_id);
+
+    superAppend(students, "h1", target_id)
+</script>   
+</body>
+</html>
