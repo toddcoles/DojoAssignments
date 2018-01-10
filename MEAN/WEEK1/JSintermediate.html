@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script>
+		// FUNCTION STARSTRING CONVERTS A PARAMETER INTO **** DEPENDING ON THE # ENTERED AS PARAMETER
+		function starString(arg){
+			var x = "*"
+			x = x.repeat(arg)
+			return x
+		}
+
+		function drawStars(arg){
+			for(var i = 0; i < arg.length; i++){
+				if(typeof(arg[i]) === "string"){
+					// console.log(arg[i])
+					var myletter = arg[i].charAt(0).toLowerCase();
+					// console.log(myletter);
+					mychar = myletter.repeat(arg[i].length)
+					console.log(mychar)
+						} else {
+						var x = "*"
+						x = x.repeat(arg[i])
+						console.log(x)
+				}
+			}
+			return true
+
+		}
+
+		let stars = starString(6)
+		console.log(stars);
+
+		let draw = drawStars([1, "Todd", 3, 5, 3, 1])
+		console.log(draw);
+
+		let draw2 = drawStars([5, "LYDIA", "AUDREY", "NICK", 7, 4])
+		console.log(draw2);
+
+	</script>
+</head>
+<body>
+
+</body>
+</html>
