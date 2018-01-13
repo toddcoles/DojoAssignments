@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+    <style type="text/css">
+		/* border and styling for table data */
+		td{
+			border: 1px solid silver;
+			text-align: center;
+			width: 40px;
+			height: 40px;
+		}
+		/* background and bolding for the first element of our rows and data */
+		td:first-child, tr:first-child{
+			background-color: silver;
+			font-weight: bold;
+		}
+	</style>
+</head>
+<body>
+	<div id="target"></div>
+</body>
+<script type="text/javascript">
+		let students = [
+		    {name: 'Remy', cohort: 'Jan'},
+		    {name: 'Genevieve', cohort: 'March'},
+		    {name: 'Chuck', cohort: 'Jan'},
+		    {name: 'Osmund', cohort: 'June'},
+		    {name: 'Nikki', cohort: 'June'},
+		    {name: 'Boris', cohort: 'June'}
+		];
+
+		let users = {
+		    employees: [
+		        {'first_name':  'Miguel', 'last_name' : 'Jones'},
+		        {'first_name' : 'Ernie', 'last_name' : 'Bertson'},
+		        {'first_name' : 'Nora', 'last_name' : 'Lu'},
+		        {'first_name' : 'Sally', 'last_name' : 'Barkyoumb'}
+		    ],
+		    managers: [
+		       {'first_name' : 'Lillian', 'last_name' : 'Chambers'},
+		       {'first_name' : 'Gordon', 'last_name' : 'Poe'}
+		    ]
+		 };
+
+		for(let student in students){
+			console.log("name:", students[student].name+", ", "cohort:", students[student].cohort);
+		}
+
+		console.log('employees');
+		for(var x = 0; x < users.employees.length; x++){
+            var str = '';
+            var str = (users.employees[x].first_name + users.employees[x].last_name);
+            var count = 0;
+            
+            for (var i = 0, len = str.length; i < len; i++) {
+                if (str[i] !== ' ')
+                    count++;
+            }
+            console.log(x+1 + ' - ' + users.employees[x].first_name, users.employees[x].last_name+ ' - '+ count);
+        }
+        console.log('');
+        console.log('Managers');
+
+        for(var x = 0; x < users.managers.length; x++){
+            var str = '';
+            var str = (users.managers[x].first_name + users.managers[x].last_name);
+            var count = 0;
+            
+            for (var i = 0, len = str.length; i < len; i++) {
+                if (str[i] !== ' ')
+                    count++;
+            }
+            console.log(x+1 + ' - ' + users.managers[x].first_name, users.managers[x].last_name+ ' - '+ count);
+}
+</script>
+</html>
