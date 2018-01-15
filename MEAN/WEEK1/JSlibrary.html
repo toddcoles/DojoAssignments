@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script type="text/javascript">
+		var _ = {
+   map: function() {
+     //code here;
+   },
+   reduce: function() { 
+     // code here;
+   },
+   find: function() {   
+     // code here;
+   },
+   filter: function(myArray, myFunction) { 
+   	var tempArray = []
+   	for(var i = 0; i < myArray.length; i++){
+   	// console.log(i);
+   	if(myFunction(myArray[i])){
+   		tempArray.push(myArray[i])
+   	}
+   }
+     return tempArray;
+   },
+   reject: function() { 
+     // code here;
+   }
+ }
+// you just created a library with 5 methods!
+
+
+var evens = _.filter([1, 2, 3, 4, 5, 6], function(num){ return num % 2 == 0; });
+console.log(evens); // if things are working right, this will return [2,4,6].
+
+	</script>
+</head>
+<body>
+
+</body>
+</html>
