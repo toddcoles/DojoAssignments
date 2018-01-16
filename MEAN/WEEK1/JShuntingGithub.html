@@ -15,15 +15,15 @@ $(document).ready(function(){
 var button = document.getElementById("myButton")
 button.addEventListener("click", whatToDoOnClick);
 function whatToDoOnClick() {
-  
-$.get("https://api.github.com/users/toddcoles", displayName)
-
-function displayName(data) {
+$.get("https://api.github.com/users/toddcoles", function(data) {
   console.log(data);
-  $("#main").html(data);
-  $( "#main" ).html( "<span class='red'>Hello <b>Again</b></span>" );
-  // alert(data)
-}
+  var string = `<p> ${data['name']} </p>`
+  string += `<p> ${data['location']} </p>`
+
+  $("#main").html(string);
+
+},'json');
+return false;
 }
 });
 
